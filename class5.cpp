@@ -19,6 +19,8 @@ class Report{
         }
         
 
+
+
     }
     void displayinfo(){
         cout<<"adno :"<<adno<<endl;
