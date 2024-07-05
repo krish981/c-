@@ -17,8 +17,7 @@ class Report{
             cout<<"Enter the marks of subject "<<i<<":";
             cin>>marks[i-1];   
         }
-        
-
+         
  }
     void displayinfo(){
         cout<<"adno :"<<adno<<endl;
