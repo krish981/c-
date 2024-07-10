@@ -17,20 +17,24 @@ class complex {
         cout<<"value a is :"<<a<<endl;
         cout<<"value b is :"<<b<<endl;
     }
-    void operator++(){
-       a++;
-       b++;
+    complex operator++(int){
+        complex y;
+        y.a=++a;
+        y.b=++b;
+        return y;
+       
     }
 };
-      
+                                                                                                                                                                                                                                                                                                                                                                                                          
 int main()
 {
-    complex s1;
+    complex s1,s2;
     s1=complex(3,6);
     cout<<"FIRST OBJECT"<<endl;
     s1.display();
-    s1.operator++();
-    s1.display();
+    s2=s1++;;
+    s2.display();
+    
     
 
 return 0;
