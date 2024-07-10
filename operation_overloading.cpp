@@ -4,6 +4,7 @@ using namespace std;
 class complex {
     int a;
     int b;
+    
     public:
     complex(){
         a=0;
