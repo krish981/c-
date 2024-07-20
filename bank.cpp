@@ -3,41 +3,102 @@ using namespace std;
 class bank
 {
 public:
-    int withdrawl();
-    int deposited();
-    int showbalce();
-    int ext();
+    void withdrawl();
+    void deposited();
+    void showbalce();
+    void ext();
     int pin, option, withdraw, deposit;
     char name[50];
     int amt = 10000;
-
+    int i=3;
     void input()
     {
         cout << "Enter the name :";
         cin >> name;
-        cout << "Enter the PIN NO. :";
+        next:cout << "Enter the PIN NO. :";
         cin >> pin;
+        
+    if (pin == 0000)
+    {
+        cout << name << endl;
+        cout << "Total amount :" << amt << endl;
+       a: cout << "----------------------------------------------------------------------------------" << endl;
+        cout << "1 withdrawl" << endl;
+        cout << "2 Deposit" << endl;
+        cout << "3 Check balance" << endl;
+        cout << "4 Exit" << endl;
+        cout << "----------------------------------------------------------------------------------" << endl;
+        cout << "Enter your Choice :";
+        cin >> option;
+    switch (option)
+    {
+    case 1:
+        withdrawl();
+        goto a;
+    case 2:
+        deposited();
+        goto a;
+    case 3:
+        showbalce();
+        goto a;
+    case 0:
+        ext();
+        break;
+    }
+    }
+    else
+    {
+        cout << "INVALID PIN !!!!!" << endl;
+        
+        
+            if(i==3){
+            cout<<i<<" more turn left"<<endl;
+            i--;
+            goto next;
+            }
+            if(i==2){
+            cout<<i<<" more turn left"<<endl;
+            i--;
+            goto next;
+            }
+            if(i==1){
+            cout<<i<<" more turn left"<<endl;
+            i--;
+            goto next;
+            }
+            else{
+            cout<<"TRANSACTION TERMINATED !!!!!";   
+            }
+        
+        
+    }
+    
     }
 };
-int bank::withdrawl()
+void bank::withdrawl()
 {
     cout << "Enter the withdraw amount :";
     cin >> withdraw;
+    if(withdraw>0 && withdraw<=amt){
     amt -= withdraw;
     cout << "Current balance :" << amt << endl;
+    }
+    else{
+        cout<<"Insufficient amount !!!! "<<endl;
+    }
 };
-int bank::deposited()
+void bank::deposited()
 {
     cout << "Enter the deposit amount :";
     cin >> deposit;
     amt += deposit;
     cout << "Current balance :" << amt << endl;
 }
-int bank::showbalce()
+void bank::showbalce()
 {
     cout << "Current balance :" << amt << endl;
 }
-int bank::ext()
+void bank::ext()
 {
     cout << "process terminated";
 }
@@ -46,39 +107,5 @@ int main()
 {
     bank s1;
     s1.input();
-    if (s1.pin == 0000)
-    {
-       a: cout << s1.name << endl;
-        cout << "Total amount :" << s1.amt << endl;
-
-        cout << "please press the number " << endl;
-        cout << "----------------------------------------------------------------------------------" << endl;
-        cout << "1 withdrawl" << endl;
-        cout << "2 Deposit" << endl;
-        cout << "3 Check balance" << endl;
-        cout << "4 Exit" << endl;
-        cout << "----------------------------------------------------------------------------------" << endl;
-        cout << "Enter your Choice :";
-        cin >> s1.option;
-    }
-    else
-    {
-        cout << "INVALID PIN !!!!!" << endl;
-    }
-    switch (s1.option)
-    {
-    case 1:
-        s1.withdrawl();
-        goto a;
-    case 2:
-        s1.deposited();
-        goto a;
-    case 3:
-        s1.showbalce();
-        goto a;
-    case 0:
-        s1.ext();
-        break;
-    }
     return 0;
 }
