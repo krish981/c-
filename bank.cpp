@@ -56,12 +56,12 @@ public:
             i--;
             goto next;
             }
-            if(i==2){
+            else if(i==2){
             cout<<i<<" more turn left"<<endl;
             i--;
             goto next;
             }
-            if(i==1){
+            else if(i==1){
             cout<<i<<" more turn left"<<endl;
             i--;
             goto next;
