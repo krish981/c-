@@ -43,6 +43,7 @@ public:
             cout << "---------------------------------------------------------------" << endl;
             goto a;
         case 2:
+            numb=0;
             cout << "Enter dish number :";
             cin >> numb;
             qty=0;
@@ -93,8 +94,6 @@ public:
             cout << "      156, sai apartment,punagam road,surat  " << endl;
             cout << "             Mobile NO : 7863074845            " << endl;
             cout << "--------------------------------------------------" << endl;
-            cout << "No.          item            quantity         price " << endl;
-
             gst = 18 * amt / 100;
             service = 12 * amt / 100;
             cout << "Total gst : 18%" << endl;
@@ -104,7 +103,10 @@ public:
             cout << "Total Bill amount :" << amt;
             cout << "   " << endl;
             total = amt + gst + service;
-            cout << "Total payable amount :" << total;
+            cout << "Total payable amount :" << total<<endl;
+            goto a;
+        case 4:
+        cout<<"Thank you have a nice day"<<endl;       
         }
     }
 };
