@@ -45,7 +45,7 @@ public:
         case 2:
             numb=0;
             cout << "Enter dish number :";
-            cin >> numb;
+            cin>>numb;
             qty=0;
             cout << "Enter the quantity :";
             cin >> qty;
